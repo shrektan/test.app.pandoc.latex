@@ -2,5 +2,5 @@
 #'
 #' @export
 app_dir <- function() {
-  system.file("test-app", "test.app.pandoc.latex")
+  system.file("test-app", package = "test.app.pandoc.latex")
 }
