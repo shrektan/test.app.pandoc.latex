@@ -32,4 +32,17 @@ function(input, output, session) {
       })
     }
   )
+
+  observeEvent(input$run, {
+    file <- tempfile(fileext = ".R")
+    writeLines(input$code, con = file)
+    cmd <- sprintf(
+      '"source(\'%s\', encoding = \'UTF-8\')"',
+      normalizePath(file, winslash = "\\", mustWork = FALSE)
+    )
+    result <- system2("Rscript", args = c("-e", cmd), stdout = TRUE, stderr = TRUE)
+    output$result2 <- renderPrint({
+      cat(result, sep = "\n")
+    })
+  })
 }
