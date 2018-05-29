@@ -1,11 +1,15 @@
 Package: test.app.pandoc.latex
 Type: Package
-Title: Test App for Pandoc And LaTeX
+Title: Test App for Pandoc and LaTeX
 Version: 0.1.0
-Author@R: person("Xianying", "Tan", email = "shrektan@126.com", role = c("aut", "cre"))
+Authors@R: person("Xianying", "Tan", email = "shrektan@126.com", role = c("aut", "cre"))
 Maintainer: Xianying Tan <shrektan@126.com>
 Description: A shiny app to test if the current environment supports pandoc and LaTeX.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
+Imports: 
+    shiny,
+    rmarkdown,
+    tinytex
