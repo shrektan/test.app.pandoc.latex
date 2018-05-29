@@ -3,12 +3,6 @@ library(shiny)
 fluidPage(
   tabsetPanel(
     tabPanel(
-      "reports",
-      downloadLink("word", label = "word"),
-      downloadLink("pdf", label = "pdf"),
-      verbatimTextOutput("result")
-    ),
-    tabPanel(
       "run code",
       column(
         6,
@@ -19,6 +13,12 @@ fluidPage(
         6,
         verbatimTextOutput("result2")
       )
+    ),
+    tabPanel(
+      "pandoc & latex",
+      downloadLink("word", label = "word"),
+      downloadLink("pdf", label = "pdf"),
+      verbatimTextOutput("result")
     )
   )
 )
