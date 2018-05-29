@@ -1,3 +1,3 @@
-# test.app.pandoc.latex
+# test.shiny.app
 
-A simple shiny app to ensure that both pandoc and latex have been correctly configured (mainly used to test a shiny server docker).
+A simple shiny app to debug the shiny server docker image.
